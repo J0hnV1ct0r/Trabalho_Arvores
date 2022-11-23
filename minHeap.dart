@@ -20,3 +20,15 @@ void main() {
   print(lista);
 	
 }
+
+void comparacao(var lista, var index){
+  var numTemp;
+  if(lista.length > 1){
+    double indexRaiz = (index - 1) / 2;
+    if(lista[index] < lista[indexRaiz.floor()]){
+      numTemp = lista[indexRaiz.floor()];
+      lista[indexRaiz.floor()] = lista[index];
+      lista[index] = numTemp;
+    }
+  }
+}
