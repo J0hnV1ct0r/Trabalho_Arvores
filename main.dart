@@ -47,7 +47,6 @@ void comparacaoFR(var lista, var index){
   }
 }
 
-
 void comparacaoRF(var lista, var indexRaiz){
   var numTemp;
   if(lista.length - 1 > 1){

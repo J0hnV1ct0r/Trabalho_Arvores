@@ -10,17 +10,17 @@ void main() {
   do{
     print("Informe um numero: ");
     final entrada = stdin.readLineSync();
-    lista.add(entrada);
+    lista.add(int.parse("${entrada}"));
     index = lista.length - 1;
     //print("posição de ${entrada} na lista: ${index}");
     comparacaoFR(lista,index);
     print("Deseja colocar outro numero? S ou N");
     final resp = stdin.readLineSync();
-    if(resp == "N" && resp == "n"){
+    if(resp == "N" || resp == "n"){
       rep = false;
     } 
   }while(rep);
-  print(lista);
+  print("Lista não ordenada: ${lista}");
   
   do{
     var tamanho = lista.length-1;
@@ -30,7 +30,6 @@ void main() {
     
   }while(lista.length > 0);
   print("Lista ordenada: ${listaFinal}");
-	
 }
 
 void comparacaoFR(var lista, var index){
